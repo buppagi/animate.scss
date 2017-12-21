@@ -1,0 +1,20 @@
+@include keyframes(SwingTopFwd) {
+  0% {
+    @include transform(rotateX(0));
+    @include transform-origin(top);
+  }
+  100% {
+    @include transform(rotateX(180deg));
+    @include transform-origin(top);
+  }
+}
+
+@mixin SwingTopFwd($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(SwingTopFwd);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

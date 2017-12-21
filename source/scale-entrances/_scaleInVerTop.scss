@@ -1,0 +1,22 @@
+@include keyframes(scaleInVerTop) {
+	0% {
+  	@include transform(scaleY(0));
+    @include transform-origin(100% 0%);
+    opacity: 1;
+  }
+	100% {
+    @include transform(scaleY(1));
+    @include transform-origin(100% 0%);
+    opacity: 1;
+  }
+}
+
+@mixin scaleInVerTop($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleInVerTop);
+  @include count($count);
+  @include duration(0.5s);
+  @include delay($delay);
+  @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

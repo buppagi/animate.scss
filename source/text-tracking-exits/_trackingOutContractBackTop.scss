@@ -1,0 +1,24 @@
+@include keyframes(trackingOutContractBackTop) {
+  0% {
+    @include transform(translateZ(0) translateY(0));
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    letter-spacing: -0.5em;
+    @include transform(translateZ(-500px) translateY(-300px));
+    opacity: 0;
+  }
+}
+
+@mixin trackingOutContractBackTop($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(trackingOutContractBackTop);
+	@include count($count);
+	@include duration(0.8);
+	@include delay($delay);
+	@include function(cubic-bezier(0.550, 0.085, 0.680, 0.530));
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

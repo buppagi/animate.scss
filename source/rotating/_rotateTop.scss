@@ -1,0 +1,20 @@
+@include keyframes(rotateTop) {
+	0% {
+    @include transform(rotate(0));
+    @include transform-origin(top);
+  }
+	100% {
+    @include transform(rotate(360deg));
+    @include transform-origin(top);
+  }
+}
+
+@mixin rotateTop($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateTop);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.455, 0.030, 0.515, 0.955));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

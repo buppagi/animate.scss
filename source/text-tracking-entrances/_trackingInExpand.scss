@@ -1,0 +1,22 @@
+@include keyframes(trackingInExpand) {
+	0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin trackingInExpand($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(trackingInExpand);
+	@include count($count);
+	@include duration(0.7);
+	@include delay($delay);
+	@include function(cubic-bezier(0.215, 0.610, 0.355, 1.000));
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

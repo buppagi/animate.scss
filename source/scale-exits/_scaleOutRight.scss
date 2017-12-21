@@ -1,0 +1,22 @@
+@include keyframes(scaleOutRight) {
+	0% {
+    @include transform(scale(1));
+    @include transform-origin(100% 50%);
+    opacity: 1;
+  }
+	100% {
+    @include transform(scale(0));
+    @include transform-origin(100% 50%);
+    opacity: 1;
+  }
+}
+
+@mixin scaleOutRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleOutRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.550, 0.085, 0.680, 0.530));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

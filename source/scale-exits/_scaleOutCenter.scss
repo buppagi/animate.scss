@@ -1,0 +1,20 @@
+@include keyframes(scaleOutCenter) {
+	0% {
+    @include transform(scale(1));
+    opacity: 1;
+  }
+	100% {
+    @include transform(scale(0));
+    opacity: 1;
+  }
+}
+
+@mixin scaleOutCenter($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleOutCenter);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.550, 0.085, 0.680, 0.530));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,23 @@
+@include keyframes(flipOutY) {
+  0% {
+    @include transform(perspective(400px));
+  }
+  30% {
+    @include transform(perspective(400px) rotate3d(0, 1, 0, -15deg));
+    opacity: 1;
+  }
+  100% {
+    @include transform(perspective(400px) rotate3d(0, 1, 0, 90deg));
+    opacity: 0;
+  }
+}
+
+@mixin flipOutY($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(flipOutY);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility(visible !important);
+}

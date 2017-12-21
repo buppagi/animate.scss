@@ -1,0 +1,22 @@
+@include keyframes(scaleDownRight) {
+	0% {
+    @include transform(scale(1));
+    @include transform-origin(100% 50%);
+    @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  }
+	100% {
+    @include transform(scale(0.5));
+    @include transform-origin(100% 50%);
+    @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  }
+}
+
+@mixin scaleDownRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleDownRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

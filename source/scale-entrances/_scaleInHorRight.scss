@@ -1,0 +1,22 @@
+@include keyframes(scaleInHorRight) {
+	0% {
+  	@include transform(scaleX(0));
+    @include transform-origin(100% 100%);
+    opacity: 1;
+  }
+	100% {
+    @include transform(scaleX(1));
+    @include transform-origin(100% 100%);
+    opacity: 1;
+  }
+}
+
+@mixin scaleInHorRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleInHorRight);
+  @include count($count);
+  @include duration(0.5s);
+  @include delay($delay);
+  @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

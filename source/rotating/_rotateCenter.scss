@@ -1,0 +1,18 @@
+@include keyframes(rotateCenter) {
+	0% {
+    @include transform(rotate(0));
+  }
+	100% {
+    @include transform(rotate(360deg));
+  }
+}
+
+@mixin rotateCenter($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateCenter);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(ease-out);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,23 @@
+@include keyframes(trackingInContract) {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+@mixin trackingInContract($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(trackingInContract);
+	@include count($count);
+	@include duration(0.7);
+	@include delay($delay);
+	@include function(cubic-bezier(0.215, 0.610, 0.355, 1.000));
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

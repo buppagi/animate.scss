@@ -1,0 +1,19 @@
+@include keyframes(fadeOutDownBig) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    @include transform(translate3d(0, 2000px, 0));
+  }
+}
+
+@mixin fadeOutDownBig($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(fadeOutDownBig);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

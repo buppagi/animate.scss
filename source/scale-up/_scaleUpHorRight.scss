@@ -1,0 +1,22 @@
+@include keyframes(scaleUpHorRight) {
+	0% {
+  	@include transform(scaleX(0.4));
+    @include transform-origin(100% 100%);
+    @include function(cubic-bezier(0.390, 0.575, 0.565, 1.000));
+  }
+	100% {
+  	@include transform(scaleX(1));
+    @include transform-origin(100% 100%);
+    @include function(cubic-bezier(0.390, 0.575, 0.565, 1.000));
+  }
+}
+
+@mixin scaleUpHorRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleUpHorRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

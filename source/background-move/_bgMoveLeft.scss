@@ -1,0 +1,20 @@
+@include keyframes(bgMoveLeft) {
+  0% {
+    @include transform(scale(1) translate(0, 0));
+    @include transform-origin(16% 50%);
+  }
+  100% {
+    @include transform(scale(1.25) translate(-20px, 15px));
+    @include transform-origin(left);
+  }
+}
+
+@mixin bgMoveLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(bgMoveLeft);
+  @include count($count);
+  @include duration(5s);
+  @include delay($delay);
+  @include function(ease-out);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

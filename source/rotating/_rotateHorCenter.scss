@@ -1,0 +1,18 @@
+@include keyframes(rotateHorCenter) {
+	0% {
+    @include transform(rotateX(0));
+  }
+	100% {
+    @include transform(rotateX(-360deg));
+  }
+}
+
+@mixin rotateHorCenter($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateHorCenter);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.455, 0.030, 0.515, 0.955));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

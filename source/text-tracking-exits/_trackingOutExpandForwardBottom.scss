@@ -1,0 +1,24 @@
+@include keyframes(trackingOutExpandForwardBottom) {
+  0% {
+    @include transform(translateZ(0) translateY(0));
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    letter-spacing: 1em;
+    @include transform(translateZ(300px) translateY(200px));
+    opacity: 0;
+  }
+}
+
+@mixin trackingOutExpandForwardBottom($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(trackingOutExpandForwardBottom);
+	@include count($count);
+	@include duration(0.8);
+	@include delay($delay);
+	@include function(cubic-bezier(0.550, 0.085, 0.680, 0.530));
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

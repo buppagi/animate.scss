@@ -1,0 +1,19 @@
+@include keyframes(fadeOutUp) {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    @include transform(translate3d(0, -100%, 0));
+  }
+}
+
+@mixin fadeOutUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(fadeOutUp);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

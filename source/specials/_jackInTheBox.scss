@@ -1,0 +1,29 @@
+@include keyframes(jackInTheBox) {
+  0% {
+    opacity: 0;
+    @include transform(scale(0.1) rotate(30deg));
+    @include transform-origin(center bottom);
+  }
+  50% {
+    @include transform(rotate(-10deg));
+  }
+
+  70% {
+    @include transform(rotate(3deg));
+  }
+
+  100% {
+    opacity: 1;
+    @include transform(scale(1));
+  }
+}
+
+@mixin jackInTheBox($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(jackInTheBox);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,24 @@
+@include keyframes(trackingOutExpandForward) {
+  0% {
+    @include transform(translateZ(0));
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    letter-spacing: 1em;
+    @include transform(translateZ(300px));
+    opacity: 0;
+  }
+}
+
+@mixin trackingOutExpandForward($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(trackingOutExpandForward);
+	@include count($count);
+	@include duration(0.8);
+	@include delay($delay);
+	@include function(cubic-bezier(0.550, 0.085, 0.680, 0.530));
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

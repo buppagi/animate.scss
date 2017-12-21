@@ -1,0 +1,22 @@
+@include keyframes(trackingOutExpand) {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.8;
+  }
+  100% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+}
+
+@mixin trackingOutExpand($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(trackingOutExpand);
+	@include count($count);
+	@include duration(0.8);
+	@include delay($delay);
+	@include function(cubic-bezier(0.550, 0.085, 0.680, 0.530));
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

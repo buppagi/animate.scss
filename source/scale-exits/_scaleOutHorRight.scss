@@ -1,0 +1,23 @@
+// Scale Out Horizontal
+@include keyframes(scaleOutHorRight) {
+	0% {
+    @include transform(scaleX(1));
+    @include transform-origin(100% 100%);
+    opacity: 1;
+  }
+	100% {
+    @include transform(scaleX(0));
+    @include transform-origin(100% 100%);
+    opacity: 1;
+  }
+}
+
+@mixin scaleOutHorRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleOutHorRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.550, 0.085, 0.680, 0.530));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

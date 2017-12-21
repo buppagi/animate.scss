@@ -1,0 +1,22 @@
+@include keyframes(rotateInDownLeft) {
+  0% {
+    @include transform(rotate3d(0, 0, 1, -45deg));
+    @include transform-origin(left bottom);
+    opacity: 0;
+  }
+  100% {
+    @include transform(none);
+    @include transform-origin(left bottom);
+    opacity: 1;
+  }
+}
+
+@mixin rotateInDownLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateInDownLeft);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

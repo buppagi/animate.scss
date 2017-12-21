@@ -1,0 +1,24 @@
+@include keyframes(trackingInContractBack) {
+  0% {
+    letter-spacing: 1em;
+    @include transform(translateZ(400px));
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    @include transform(translateZ(0));
+    opacity: 1;
+  }
+}
+
+@mixin trackingInContractBack($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(trackingInContractBack);
+	@include count($count);
+	@include duration(0.7);
+	@include delay($delay);
+	@include function(cubic-bezier(0.215, 0.610, 0.355, 1.000));
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}

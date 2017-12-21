@@ -1,0 +1,21 @@
+@include keyframes(rotateDiagonal2) {
+	0% {
+    @include transform(rotate3d(-1, 1, 0, 0deg));
+  }
+  50% {
+    @include transform(rotate3d(-1, 1, 0, 180deg));
+  }
+	100% {
+    @include transform(rotate3d(-1, 1, 0, 360deg));
+  }
+}
+
+@mixin rotateDiagonal2($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateDiagonal2);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(linear);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

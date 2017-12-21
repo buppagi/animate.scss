@@ -1,0 +1,21 @@
+@include keyframes(rotateOutUpLeft) {
+	0% {
+  	opacity: 1;
+    @include transform-origin(left bottom);
+  }
+ 100% {
+		opacity: 0;
+		@include transform(rotate3d(0, 0, 1, -45deg));
+		@include transform-origin(left bottom);
+  }
+}
+
+@mixin rotateOutUpLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateOutUpLeft);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

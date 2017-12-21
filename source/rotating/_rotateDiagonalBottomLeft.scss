@@ -1,0 +1,24 @@
+@include keyframes(rotateDiagonalBottomLeft) {
+	0% {
+    @include transform(rotate3d(1, 1, 0, 0deg));
+    @include transform-origin(0% 100%);
+  }
+  50% {
+    @include transform(rotate3d(1, 1, 0, 180deg));
+    @include transform-origin(0% 100%);
+  }
+	100% {
+    @include transform(rotate3d(1, 1, 0, 360deg));
+    @include transform-origin(0% 100%);
+  }
+}
+
+@mixin rotateDiagonalBottomLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateDiagonalBottomLeft);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(linear);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

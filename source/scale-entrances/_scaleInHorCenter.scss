@@ -1,0 +1,20 @@
+@include keyframes(scaleInHorCenter) {
+	0% {
+  	@include transform(scaleX(0));
+    opacity: 1;
+  }
+	100% {
+    @include transform(scaleX(1));
+    opacity: 1;
+  }
+}
+
+@mixin scaleInHorCenter($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleInHorCenter);
+  @include count($count);
+  @include duration(0.5s);
+  @include delay($delay);
+  @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

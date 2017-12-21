@@ -1,0 +1,20 @@
+@include keyframes(scaleInCenter) {
+	0% {
+  	@include transform(scale(0));
+    opacity: 1;
+  }
+	100% {
+    @include transform(scale(1));
+    opacity: 1;
+  }
+}
+
+@mixin scaleInCenter($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleInCenter);
+  @include count($count);
+  @include duration(0.5s);
+  @include delay($delay);
+  @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

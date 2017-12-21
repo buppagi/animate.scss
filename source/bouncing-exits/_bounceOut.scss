@@ -1,0 +1,23 @@
+@include keyframes(bounceOut) {
+  0% {
+    @include transform(scale3d(.9, .9, .9));
+  }
+  50%, 55% {
+    opacity: 1;
+    @include transform(scale3d(1.1, 1.1, 1.1));
+  }
+  100% {
+    opacity: 0;
+    @include transform(scale3d(.3, .3, .3));
+  }
+}
+
+@mixin bounceOut($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(bounceOut);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

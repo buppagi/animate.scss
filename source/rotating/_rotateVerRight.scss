@@ -1,0 +1,20 @@
+@include keyframes(rotateVerRight) {
+	0% {
+    @include transform(rotateY(0));
+    @include transform-origin(right);
+  }
+	100% {
+    @include transform(rotateY(-360deg));
+    @include transform-origin(right);
+  }
+}
+
+@mixin rotateVerRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(rotateVerRight);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.455, 0.030, 0.515, 0.955));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

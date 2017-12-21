@@ -1,0 +1,20 @@
+@include keyframes(SwingRightBack) {
+  0% {
+    @include transform(rotateY(0));
+    @include transform-origin(right);
+  }
+  100% {
+    @include transform(rotateY(-180deg));
+    @include transform-origin(right);
+  }
+}
+
+@mixin SwingRightBack($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(SwingRightBack);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

@@ -1,0 +1,20 @@
+@include keyframes(scaleDownHorCenter) {
+	0% {
+    @include transform(scaleX(1));
+    @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  }
+	100% {
+    @include transform(scaleX(0.3));
+    @include function(cubic-bezier(0.250, 0.460, 0.450, 0.940));
+  }
+}
+
+@mixin scaleDownHorCenter($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(scaleDownHorCenter);
+  @include count($count);
+  @include duration($duration);
+  @include delay($delay);
+  @include function($function);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}
