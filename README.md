@@ -4,24 +4,12 @@
 
 추가적으로 애니메이션을 좀 더 추가 했습니다.
 
-## 추가 리스트 정리 ##
-+ swing(basic, in, out) 추가하기
-
-## Scss에 추가한 애니메이션 ##
-### 2017.07.31 ###
+## Scss에 추가한 애니메이션 리스트 정리 ##
 + Scale Exits 추가
 + rotating 추가
-
-### 2017.07.28 ###
 + Scale Entrances 추가
-
-### 2017.07.18 ###
 + Rotate 추가
-
-### 2017.07.17 ###
 + Scale Up, Scale Down 추가
-
-### 2017.07.13 ###
 + *attention-seekers > headShake* 추가
 + *specials > jackInTheBox* 추가
 + *background* 추가
