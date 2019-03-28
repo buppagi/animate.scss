@@ -1,0 +1,20 @@
+@include keyframes(BackgroundMoveRight) {
+  0% {
+    @include transform(scale(1) translate(0, 0));
+    @include transform-origin(84% 50%);
+  }
+  100% {
+    @include transform(scale(1.25) translateX(20px));
+    @include transform-origin(right);
+  }
+}
+
+@mixin BackgroundMoveRight($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+  @include animation-name(BackgroundMoveRight);
+  @include count($count);
+  @include duration(5s);
+  @include delay($delay);
+  @include function(ease-out);
+  @include fill-mode($fill);
+  @include visibility($visibility);
+}

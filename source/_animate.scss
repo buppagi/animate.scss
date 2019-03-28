@@ -10,6 +10,9 @@
 .headShake {
   @include headShake();
 }
+.heartBeat {
+  @include heartBeat();
+}
 .jello {
   @include jello();
 }
@@ -33,55 +36,43 @@
 }
 
 /* background */
-.bgBottom {
-  @include bgBottom();
+.BackgroundColorBottom {
+  @include BackgroundColorBottom();
 }
-.bgBottomLeft {
-  @include bgBottomLeft();
+.BackgroundColorLeft {
+  @include BackgroundColorLeft();
 }
-.bgBottomRight {
-  @include bgBottomRight();
+.BackgroundColorRight {
+  @include BackgroundColorRight();
 }
-.bgLeft {
-  @include bgLeft();
-}
-.bgRight {
-  @include bgRight();
-}
-.bgTop {
-  @include bgTop();
-}
-.bgTopLeft {
-  @include bgTopLeft();
-}
-.bgTopRight {
-  @include bgTopRight();
+.BackgroundColorTop {
+  @include BackgroundColorTop();
 }
 
 /* background-move */
-.bgMoveBottom {
-  @include bgMoveBottom();
+.BackgroundMoveBottom {
+  @include BackgroundMoveBottom();
 }
-.bgMoveBottomLeft {
-  @include bgMoveBottomLeft();
+.BackgroundMoveBottomLeft {
+  @include BackgroundMoveBottomLeft();
 }
-.bgMoveBottomRight {
-  @include bgMoveBottomRight();
+.BackgroundMoveBottomRight {
+  @include BackgroundMoveBottomRight();
 }
-.bgMoveLeft {
-  @include bgMoveLeft();
+.BackgroundMoveLeft {
+  @include BackgroundMoveLeft();
 }
-.bgMoveRight {
-  @include bgMoveRight();
+.BackgroundMoveRight {
+  @include BackgroundMoveRight();
 }
-.bgMoveTop {
-  @include bgMoveTop();
+.BackgroundMoveTop {
+  @include BackgroundMoveTop();
 }
-.bgMoveTopLeft {
-  @include bgMoveTopLeft();
+.BackgroundMoveTopLeft {
+  @include BackgroundMoveTopLeft();
 }
-.bgMoveTopRight {
-  @include bgMoveTopRight();
+.BackgroundMoveTopRight {
+  @include BackgroundMoveTopRight();
 }
 
 /* bouncing-entrances */
@@ -273,6 +264,179 @@
   @include rotateOutUpRight();
 }
 
+/* Scale Down */
+.scaleDownBottom {
+  @include scaleDownBottom();
+}
+.scaleDownBottomLeft {
+  @include scaleDownBottomLeft();
+}
+.scaleDownBottomRight {
+  @include scaleDownBottomRight();
+}
+.scaleDownCenter {
+  @include scaleDownCenter();
+}
+.scaleDownHorLeft {
+  @include scaleDownHorLeft();
+}
+.scaleDownHorRight {
+  @include scaleDownHorRight();
+}
+.scaleDownLeft {
+  @include scaleDownLeft();
+}
+.scaleDownRight {
+  @include scaleDownRight();
+}
+.scaleDownTop {
+  @include scaleDownTop();
+}
+.scaleDownTopLeft {
+  @include scaleDownTopLeft();
+}
+.scaleDownTopRight {
+  @include scaleDownTopRight();
+}
+
+/* Scale entrances */
+.scaleInBottom {
+  @include scaleInBottom();
+}
+.scaleInBottomLeft {
+  @include scaleInBottomLeft();
+}
+.scaleInBottomRight {
+  @include scaleInBottomRight();
+}
+.scaleInCenter {
+  @include scaleInCenter();
+}
+.scaleInHorCenter {
+  @include scaleInHorCenter();
+}
+.scaleInHorLeft {
+  @include scaleInHorLeft();
+}
+.scaleInHorRight {
+  @include scaleInHorRight();
+}
+.scaleInLeft {
+  @include scaleInLeft();
+}
+.scaleInRight {
+  @include scaleInRight();
+}
+.scaleInTop {
+  @include scaleInTop();
+}
+.scaleInTopLeft {
+  @include scaleInTopLeft();
+}
+.scaleInTopRight {
+  @include scaleInTopRight();
+}
+.scaleInVerBottom {
+  @include scaleInVerBottom();
+}
+.scaleInVerCenter {
+  @include scaleInVerCenter();
+}
+.scaleInVerTop {
+  @include scaleInVerTop();
+}
+
+/* Scale exits */
+.scaleOutBottom {
+  @include scaleOutBottom();
+}
+.scaleOutBottomLeft {
+  @include scaleOutBottomLeft();
+}
+.scaleOutBottomRight {
+  @include scaleOutBottomRight();
+}
+.scaleOutCenter {
+  @include scaleOutCenter();
+}
+.scaleOutHor {
+  @include scaleOutHor();
+}
+.scaleOutHorLeft {
+  @include scaleOutHorLeft();
+}
+.scaleOutHorRight {
+  @include scaleOutHorRight();
+}
+.scaleOutLeft {
+  @include scaleOutLeft();
+}
+.scaleOutRight {
+  @include scaleOutRight();
+}
+.scaleOutTop {
+  @include scaleOutTop();
+}
+.scaleOutTopLeft {
+  @include scaleOutTopLeft();
+}
+.scaleOutTopRight {
+  @include scaleOutTopRight();
+}
+.scaleOutVer {
+  @include scaleOutVer();
+}
+.scaleOutVerBottom {
+  @include scaleOutVerBottom();
+}
+.scaleOutVerTop {
+  @include scaleOutVerTop();
+}
+
+/* Scale Up */
+.scaleUpBottom {
+  @include scaleUpBottom();
+}
+.scaleUpBottomLeft {
+  @include scaleUpBottomLeft();
+}
+.scaleUpBottomRight {
+  @include scaleUpBottomRight();
+}
+.scaleUpCenter {
+  @include scaleUpCenter();
+}
+.scaleUpHorCenter {
+  @include scaleUpHorCenter();
+}
+.scaleUpHorLeft {
+  @include scaleUpHorLeft();
+}
+.scaleUpHorRight {
+  @include scaleUpLeft();
+}
+.scaleUpRight {
+  @include scaleUpRight();
+}
+.scaleUpTop {
+  @include scaleUpTop();
+}
+.scaleUpTopLeft {
+  @include scaleUpTopLeft();
+}
+.scaleUpTopRight {
+  @include scaleUpTopRight();
+}
+.scaleUpVerBottom {
+  @include scaleUpVerBottom();
+}
+.scaleUpVerCenter {
+  @include scaleUpVerCenter();
+}
+.scaleUpVerTop {
+  @include scaleUpVerTop();
+}
+
 /* swing */
 .SwingTopFwd {
   @include SwingTopFwd(
@@ -371,4 +535,47 @@
 }
 .zoomOutUp {
   @include zoomOutUp();
+}
+
+.animated {
+  &.infinite {
+    @include count(infinite);
+  }
+  &.delay-1s {
+    @include delay(1s);
+  }
+  &.delay-2s {
+    @include delay(2s);
+  }
+  &.delay-3s {
+    @include delay(3s);
+  }
+  &.delay-4s {
+    @include delay(4s);
+  }
+  &.delay-5s {
+    @include delay(5s);
+  }
+  &.fast {
+    @include duration(800ms);
+  }
+  
+  &.faster {
+    @include duration(500ms);
+  }
+  
+  &.slow {
+    @include duration(2s);
+  }
+  
+  &.slower {
+    @include duration(3s);
+  }
+}
+
+@media (print), (prefers-reduced-motion) {
+  .animated {
+    animation:unset !important;
+    transition: none !important;
+  }
 }

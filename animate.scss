@@ -1,0 +1,58 @@
+@charset "UTF-8";
+// INDEX OF ANIMATIONS
+// @import로 프로젝트에 추가하시면 됩니다.
+// 아래 카테고리를 주석으로 처리하여 프로젝트에서 빼시길 바랍니다.
+// 또는, @import로 특정 부분을 가져올 수 있습니다. (예. @import "attention/bounce";
+//
+//-----------------------------------------------------------------------
+
+// 사용방법 1
+// .your-class-name {
+//   @include bounceIn();
+// }
+// 사용방법 2
+// .your-class-name {
+//   @include bounceIn(
+//     $duration: 1s,
+//     $count: 2,
+//     $delay: .2s,
+//     $function: ease,
+//     $fill: both
+//   );
+// }
+
+// 항상 필요
+@import "source/properties";
+
+// 애니메이션 가져오기
+@import "source/attention-seekers/attention-seekers";
+@import "source/background/background";
+@import "source/background-move/background-move";
+@import "source/bouncing-entrances/bouncing-entrances";
+@import "source/bouncing-exits/bouncing-exits";
+@import "source/fading-entrances/fading-entrances";
+@import "source/fading-exits/fading-exits";
+@import "source/flippers/flippers";
+@import "source/lightspeed/lightspeed";
+@import "source/rotating/rotating";
+@import "source/rotating-entrances/rotating-entrances";
+@import "source/rotating-exits/rotating-exits";
+@import "source/sliding-entrances/sliding-entrances";
+@import "source/sliding-exits/sliding-exits";
+@import "source/specials/specials";
+@import "source/zooming-entrances/zooming-entrances";
+@import "source/zooming-exits/zooming-exits";
+// 새로운 애니메이션
+@import "source/background/background";
+@import "source/background-move/background-move";
+@import "source/scale-down/scale-down";
+@import "source/scale-entrances/scale-entrances";
+@import "source/scale-exits/scale-exits";
+@import "source/scale-up/scale-up";
+@import "source/swing/swing";
+@import "source/swing-entrances/swing-entrances";
+@import "source/swing-exits/swing-exits";
+@import "source/text-tracking-entrances/text-tracking-entrances";
+@import "source/text-tracking-exits/text-tracking-exits";
+// 애니메이션 실행.
+@import "source/animate";

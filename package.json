@@ -1,28 +1,26 @@
 {
-  "name": "animatewithsass",
-  "version": "3.5.2",
+  "name": "animate.scss",
+  "version": "1.1.0",
   "main": "animate.scss",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "이것은 Dan Eden의 Animate.css와 Geoff Graham의 Animate.scss기반으로 만든 한글버전 Sass입니다.",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/buppagistar/animate.scss.git"
   },
-  "author": "singihae",
+  "author": {
+    "name": "buppagistar"
+  },
+  "homepage": "https://buppagistar.github.io/animate.scss/",
   "license": "MIT",
-  "homepage": "",
+  "style": "./dist/animate.min.css",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
-    "gulp": "^3.9.0",
+    "browser-sync": "^6.8.0",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0"
-  },
-  "keywords": [
-    "animate.css",
-    "animate.scss"
-  ]
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^6.8.0",
+    "gulp-header": "^2.0.7"
+  }
 }

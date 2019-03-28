@@ -1,0 +1,27 @@
+@include keyframes(heartBeat) {
+  0% {
+		@include transform(scale(1));
+	}
+	14% {
+    @include transform(scale(1.3));
+  }
+  28% {
+    @include transform(scale(1));
+  }
+  42% {
+    @include transform(scale(1.3));
+  }
+  70% {
+    @include transform(scale(1));
+  }
+}
+
+@mixin heartBeat($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(heartBeat);
+	@include count($count);
+	@include duration(1.3s);
+	@include delay($delay);
+	@include function(ease-in-out);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+}
