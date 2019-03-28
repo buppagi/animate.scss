@@ -48,7 +48,7 @@
 >_**참고**: CSS의 "vendor"를 해당 공급 업체 접두어로 바꾸시면 됩니다.(webkit, moz, ms 등)_
 
 ### Animate.css
-[Animate.css](https://buppagistar.github.io/animate.scss/)만을 사용하시는 분들은 이것을 참고하시면 됩니다.
+[Animate.css](https://daneden.github.io/animate.css/)만을 사용하시는 분들은 이것을 참고하시면 됩니다.
 1. html 문서의`<head>`에 스타일시트에 포함시키면 됩니다.
 ```html
 <head>
@@ -125,7 +125,7 @@
 ```html
 <h1 class="animated infinite bounce delay-2s">Example</h1>
 ```
-[모든 애니메이션 확인하기!](https://buppagistar.github.io/animate.scss/)
+[모든 애니메이션 확인하기!](https://buppagi.github.io/animate.scss/)
 
 
 ### JavaScript 사용하기
