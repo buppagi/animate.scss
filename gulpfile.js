@@ -23,8 +23,8 @@ var opts = {
 	mapPath: '../maps',
 
 	autoprefixer: {
-		browsers: ['> 1%', 'last 2 versions', 'Firefox ESR'],
 		cascade: false,
+		remove: false
 	},
 
 	minRename: {

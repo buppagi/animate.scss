@@ -22,5 +22,6 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^6.8.0",
     "gulp-header": "^2.0.7"
-  }
+  },
+  "browserslist": ["> 1%", "last 2 versions", "Firefox ESR"]
 }
